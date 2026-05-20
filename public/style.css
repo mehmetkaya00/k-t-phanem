@@ -1,0 +1,224 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  color: #1a1a1a;
+  background: #f4f5f7;
+}
+
+.site-header {
+  background: #1e3a5f;
+  color: #fff;
+  padding: 1.25rem 1rem;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;
+}
+
+.tagline {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1rem;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.15rem;
+  color: #1e3a5f;
+}
+
+.card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+}
+
+.message {
+  padding: 0.65rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.message.error {
+  background: #fde8e8;
+  color: #9b1c1c;
+  border: 1px solid #f5c2c7;
+}
+
+.message.success {
+  background: #e8f5e9;
+  color: #1b5e20;
+  border: 1px solid #c8e6c9;
+}
+
+.auth-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .auth-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.stack label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+textarea {
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.55rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #1e3a5f;
+  color: #fff;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #2a5082;
+}
+
+.btn-secondary {
+  background: #6c757d;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+}
+
+.app-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.app-toolbar p {
+  margin: 0;
+}
+
+.badge {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.15rem 0.45rem;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  background: #e7f1ff;
+  color: #1e3a5f;
+  text-transform: uppercase;
+}
+
+.book-form .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.book-form .grow {
+  flex: 1 1 180px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 0.5rem;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #dee2e6;
+  padding: 0.5rem 0.65rem;
+  text-align: left;
+}
+
+.data-table th {
+  background: #f1f3f5;
+}
+
+.data-table button {
+  padding: 0.35rem 0.6rem;
+  font-size: 0.8rem;
+  background: #c92a2a;
+}
+
+.data-table button:hover {
+  background: #a61e1e;
+}
+
+.muted {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.admin-block {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.admin-block .btn-secondary {
+  margin-bottom: 0.75rem;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  color: #6c757d;
+  font-size: 0.85rem;
+}

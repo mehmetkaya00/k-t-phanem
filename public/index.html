@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kütüphane</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Kütüphane</h1>
+      <p class="tagline">Kitaplarınızı kaydedin ve yönetin.</p>
+    </header>
+
+    <main class="container">
+      <div id="message" class="message" hidden></div>
+
+      <section id="auth-section" class="card">
+        <h2>Giriş veya kayıt</h2>
+        <div class="auth-grid">
+          <form id="login-form" class="stack">
+            <h3>Giriş</h3>
+            <label>
+              E-posta
+              <input type="email" name="email" required autocomplete="username" />
+            </label>
+            <label>
+              Şifre
+              <input
+                type="password"
+                name="password"
+                required
+                autocomplete="current-password"
+              />
+            </label>
+            <button type="submit">Giriş yap</button>
+          </form>
+          <form id="register-form" class="stack">
+            <h3>Kayıt</h3>
+            <label>
+              E-posta
+              <input type="email" name="email" required autocomplete="username" />
+            </label>
+            <label>
+              Şifre (en az 6 karakter)
+              <input
+                type="password"
+                name="password"
+                required
+                minlength="6"
+                autocomplete="new-password"
+              />
+            </label>
+            <button type="submit">Kayıt ol</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="app-section" class="card" hidden>
+        <div class="app-toolbar">
+          <p>
+            Oturum: <strong id="user-email"></strong>
+            <span id="user-role-badge" class="badge"></span>
+          </p>
+          <button type="button" id="logout-btn" class="btn-secondary">Çıkış</button>
+        </div>
+
+        <h2>Kitap ekle</h2>
+        <form id="book-form" class="stack book-form">
+          <div class="row">
+            <label class="grow">
+              Kitap adı
+              <input type="text" name="title" required maxlength="500" />
+            </label>
+            <label class="grow">
+              Yazar
+              <input type="text" name="author" required maxlength="300" />
+            </label>
+          </div>
+          <div class="row">
+            <label>
+              Sayfa sayısı
+              <input type="number" name="page_count" required min="1" step="1" />
+            </label>
+            <label class="grow">
+              ISBN (isteğe bağlı)
+              <input type="text" name="isbn" maxlength="32" />
+            </label>
+          </div>
+          <label>
+            Not (isteğe bağlı)
+            <textarea name="notes" rows="2" maxlength="2000"></textarea>
+          </label>
+          <button type="submit">Kitabı kaydet</button>
+        </form>
+
+        <h2>Kitaplarım</h2>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Ad</th>
+                <th>Yazar</th>
+                <th>Sayfa</th>
+                <th>ISBN</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="books-tbody"></tbody>
+          </table>
+          <p id="books-empty" class="muted" hidden>Henüz kitap yok.</p>
+        </div>
+
+        <section id="admin-section" class="admin-block" hidden>
+          <h2>Yönetici: kullanıcılar</h2>
+          <button type="button" id="refresh-users-btn" class="btn-secondary">
+            Listeyi yenile
+          </button>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>E-posta</th>
+                  <th>Rol</th>
+                </tr>
+              </thead>
+              <tbody id="users-tbody"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>Kütüphane — Express + düz HTML/CSS/JS</small>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
